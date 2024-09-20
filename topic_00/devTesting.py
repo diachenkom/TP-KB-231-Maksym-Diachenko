@@ -1,1 +1,1 @@
-print("Hello from Git Testing Folder")
+print("Hello Maksim, from Git Testing Folder")
