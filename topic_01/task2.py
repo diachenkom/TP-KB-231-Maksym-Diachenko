@@ -1,0 +1,6 @@
+text = input("Enter text:")
+print("Strip text: " + text.strip())
+print("Capitalize text: " + text.capitalize())
+print("Title text: " + text.title())
+print("Upper text: " + text.upper())
+print("Lower text: " + text.lower())
