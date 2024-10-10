@@ -1,25 +1,25 @@
 import math
 
-print("Quadratic equation has the form: a*(x^2) + b*x + c = 0")
-a = int(input("Enter a = "))
-b = int(input("Enter b = "))
-c = int(input("Enter c = "))
+print("Квадратне рівняння має наступний вигляд: a*(x^2) + b*x + c = 0")
+a = int(input("Уведіть a = "))
+b = int(input("Уведіть b = "))
+c = int(input("Уведіть c = "))
 
 def discr(a, b, c):
     return b**2 - 4*a*c
 
 def equation_solution(a, b, c):
     d = discr(a, b, c)
-    print("Discriminant is: " + str(d))
+    print("Дискримінант: " + str(d))
     if d > 0:
         x1 = (-(b) + math.sqrt(d)) / (2*a)
         x2 = (-(b) - math.sqrt(d)) / (2*a)
-        return f"Equation has two solutions: x1 = {x1} and x2 = {x2}"
+        return f"Рівняння має два розв'язки: x1 = {x1} and x2 = {x2}"
     elif d == 0:
         x1 = (-b) / (2*a)
-        return f"Equation has one solutions: x = {x1}"
+        return f"Рівняння має один розв'язок: x = {x1}"
     else:
-        return "Equation has not solutions"
+        return "Рівняння не має розв'язків"
 
 print (equation_solution(a, b, c))
 
