@@ -33,7 +33,7 @@ def addNewElement():
     return
 
 def deleteElement():
-    name = input("Please enter name to be delated: ")
+    name = input("Please enter name to be delted: ")
     deletePosition = -1
     for item in list:
         if name == item["name"]:
