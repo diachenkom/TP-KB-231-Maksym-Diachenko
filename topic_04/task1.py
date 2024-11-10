@@ -8,9 +8,26 @@ def multiply(x, y):
     return x * y
 
 def divide(x, y):
-    if y == 0:
-        return "Помилка: ділення на нуль не можливе"
-    return x / y
+    while True:
+        try:
+            a = x / y
+            break
+        except ZeroDivisionError:
+            print("Помилка ділення на нуль.")
+            y = input("Введіть НЕ нульове друге число: ")
+            y = CheckValue(y)
+            continue
+    return a
+
+def CheckValue(num):
+    while True:
+        try:
+            num = float(num)
+            break
+        except ValueError:
+            print("Некоректне число")
+            num = input("Введіть коректне число: ")
+    return num
 
 def calculator():
     print("Доступні операції:")
@@ -27,8 +44,8 @@ def calculator():
             print("Завершення роботи калькулятора.")
             break
         else:
-            num1 = float(num1)
-
+            num1=CheckValue(num1)
+        
         # Запит операції
         operation = input("Введіть операцію (+, -, *, /): ")
         if operation.lower() in ['exit']:
@@ -37,14 +54,14 @@ def calculator():
         if operation not in ['+', '-', '*', '/']:
             print("Некоректна операція. Спробуйте ще раз.")
             continue
-
+                
         # Запит другого числа
         num2 = input("Введіть друге число: ")
         if num2.lower() in ['exit']:
             print("Завершення роботи калькулятора.")
             break
         else:
-            num2 = float(num2)
+            num2=CheckValue(num2)
 
         # Виконання обчислення
         if operation == '+':
