@@ -1,9 +1,4 @@
 
-I add topic_01
-I add topic_02
-I add topic_03
-I add lab_01
-I add topic_04
-I add topic_05
+I add topic_01, topic_02, topic_03, lab_01, topic_04, topic_05
 
 
